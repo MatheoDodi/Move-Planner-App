@@ -3,7 +3,7 @@
 body {
     font-family: Montserrat, sans-serif;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     background: #16222A;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to top, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to top, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -14,7 +14,9 @@ background: linear-gradient(to top, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Fir
 .wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    min-height: calc(100vh - 20px);
+    width: 70%;
+    margin: 0 auto;
+    min-height: 100vh;
     grid-auto-rows: min-content;
 }
 
@@ -74,12 +76,16 @@ button:hover {
 
 .bgimg {
     width: 100%;
+    height: 100%;
+    -webkit-box-shadow:0 0 10px 5px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow:0 0 10px 5px rgba(255, 255, 255, 0.5);
+    box-shadow:0 0 10px 5px rgba(255, 255, 255, 0.5);
 }
 
 .imgContainer {
     grid-column: 1 / -1;
     justify-self: center;
-    width: 50%;
+    width: 75%;
 }
 
 .greeting {
@@ -114,8 +120,12 @@ ul {
 
 a {
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: bold;
+}
+
+a:hover {
+    color: #c1c1c1;
 }
 
 h2 {
@@ -144,4 +154,14 @@ h2 {
 }
 .article:first-child {
     border-top:none;
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .nytimes-container {
+        width: 100%;
+    }
 }
