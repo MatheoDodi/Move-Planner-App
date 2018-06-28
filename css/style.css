@@ -1,33 +1,135 @@
 * {box-sizing:border-box;}
-body {background-color: #CCC;}
+
+body {
+    font-family: Montserrat, sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    background: #16222A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    min-height: calc(100vh - 20px);
+    grid-auto-rows: min-content;
+}
+
+.form-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    grid-column: 1 / -1;
+    justify-self: center;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1rem;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.streetText {
+    grid-column: 1 / 2;
+}
+
+#street, #city {
+    font-size: 1.5rem;
+    background-color: #cddfed;
+    border-style: solid;
+    width: 200px;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+button {
+    margin-top: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #4eb5f1;
+    font-size: 1.5rem;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 1em;
+    color: white;
+}
+
+button:hover {
+    background-color: #3e90c0;
+}
+
+#street:focus, #city:focus {
+    outline: none;
+}
+
+#submit-btn {
+    grid-column: 1 / -1
+}
 
 .bgimg {
-    position:fixed;
-    top: 0;
-    left: 0;
-    width:100%;
-    z-index:-1;
-    opacity:1;
+    width: 100%;
+}
+
+.imgContainer {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
 }
 
 .greeting {
-    color:black;
+    grid-column: 1 / -1;
+    color: white;
     text-shadow: 1px 1px 3px rgba(255,255,255, .5);
     text-align: center;
 }
 
 .wikipedia-container {
-    float:right;
-    width:290px;
-    padding:10px;
-    margin-right: 10px;
-    background-color: rgba(255,255,255,0.7);
+    margin-top: 5rem;
+    grid-column: 1 / -1;
+    padding: 1rem;
+    text-align: center;
+}
+
+#wikipedia-links {
+    padding: 0;
 }
 
 .nytimes-container {
-    padding: 10px;
-    margin-right:300px;
-    background-color: rgba(255,255,255,0.7);
+    grid-column: 1 / -1;
+    padding: 1rem;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.nytimes-container li {
+    margin-top: 8rem;
+}
+
+.wikipedia-container li {
+    margin-top: 3rem;
+    text-decoration: underline;
+    display: inline-block;
 }
 
 .article-list {
